@@ -1,6 +1,6 @@
 package org.aim.movie.controller;
 
-import org.aim.movie.SpringBootVuejsApplication;
+import org.aim.movie.MovieApplication;
 import org.aim.movie.domain.User;
 import io.restassured.RestAssured;
 import org.apache.http.HttpStatus;
@@ -19,7 +19,7 @@ import static org.hamcrest.Matchers.is;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(
-		classes = SpringBootVuejsApplication.class,
+		classes = MovieApplication.class,
 		webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT
 )
 public class BackendControllerTest {
