@@ -6,7 +6,10 @@ import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
 import store from './store'
 
+require("./assets/main.css");
+
 Vue.config.productionTip = false;
+Vue.prototype.moment = moment
 
 // Bootstrap
 Vue.use(BootstrapVue);
