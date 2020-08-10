@@ -29,7 +29,7 @@ const router = new Router({
         {
             path: '/actor',
             name: 'Actor',
-            component: () => import('../views/AddActor.vue')
+            component: () => import('/views/AddActor.vue')
           },
           {
             path: '/actors',
@@ -37,12 +37,12 @@ const router = new Router({
             // route level code-splitting
             // this generates a separate chunk (actors.[hash].js) for this route
             // which is lazy-loaded when the route is visited.
-            component: () => import(/* webpackChunkName: "actors" */ '../views/Actors.vue')
+            component: () => import(/* webpackChunkName: "actors" */ '/views/Actors.vue')
           },
-          { path: '/movies', name: 'Movies', component: () => import('../views/Movies.vue') },
-          { path: '/movie/add', name: 'AddMovie', component: () => import('../views/AddMovie.vue')},
-          { path: '/movie/:id', name: 'Movie', component: () => import('../views/MovieDetail.vue')},
-          
+          { path: '/movies', name: 'Movies', component: () => import('/views/Movies.vue') },
+          { path: '/movie/add', name: 'AddMovie', component: () => import('/views/AddMovie.vue')},
+          { path: '/movie/:id', name: 'Movie', component: () => import('/views/MovieDetail.vue')},
+
         // otherwise redirect to home
         { path: '*', redirect: '/' }
     ]
