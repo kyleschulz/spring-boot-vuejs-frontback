@@ -16,6 +16,9 @@ export default {
     createUser(firstName, lastName) {
         return AXIOS.post(`/user/` + firstName + '/' + lastName);
     },
+    createActor(actor) {
+        return AXIOS.post(`/actors/`, actor);
+    },
     getSecured(user, password) {
         return AXIOS.get(`/secured/`,{
             auth: {

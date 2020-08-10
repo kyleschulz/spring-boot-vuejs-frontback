@@ -36,7 +36,9 @@
 </template>
 
 <script>
-export default {
+  import api from "./backend-api";
+
+  export default {
     name: 'AddActor',
     data: () => ({
         actor: {
@@ -50,11 +52,13 @@ export default {
             this.$router.push({path: '/actors'});
         },
         async save() {
-            const response = await this.$http.post('/api/actors/', this.actor)
+            const response = await api.createActor(this.actor)
             console.log(response);
             if (response.status === 200) {
                 this.$router.push({path: '/actors'});
             }
+
+
         }
     }
 }
